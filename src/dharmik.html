@@ -1,0 +1,103 @@
+<!-- Index.js
+import React from 'react';
+import ReactDOM from 'react-dom';
+import faker from 'faker';
+import App from "./App";
+
+const APP = () => {
+    // const 
+    return (
+    <div className="ui container comments">
+        {/* <div className= "comment">
+            <a href="/" className="avatar">
+                <img alt="avatar" src={faker.image.avatar()}  />
+            </a>
+            <div className="content">
+                <a href="/" className="author">
+                    Sam
+                </a>
+                <div className="metadata">
+                    <span className="date">Today at 6:00PM</span> 
+                </div>
+                <div className="text"> Nice blog Post!</div>
+            </div>
+        </div> */}
+        <App/>
+    </div>
+   )
+};
+
+ReactDOM.render(<APP/> , document.querySelector("#root"));
+ 
+//App.js
+import React, { Component } from "react";
+import Comment from "./Comment";
+
+function Name(props) {
+  const { name } = props;
+  return <p>{name}</p>;
+}
+
+const nameArray = ["Vaidehi", "DHarmishtha", "Vipula", "Fahim", "Dharmik"];
+
+class App extends Component {
+  state = { data: "" };
+  onTextChange = (data) => {
+    console.log("Data in Method ::", data);
+    this.setState({
+      data: data,
+    });
+  };
+
+  render() {
+    console.log("nameArray", nameArray);
+    return (
+      <div>
+        <h1>Hello </h1>
+        <p>{this.state.data}</p>
+        <Comment onTextChange={this.onTextChange} />
+        {nameArray.map((u, i) => {
+          return <Name name={u} />;
+        })}
+      </div>
+    );
+  }
+}
+
+export default App;
+// Comment.js
+import React, { Component } from "react";
+import Comment from "./Comment";
+
+function Name(props) {
+  const { name } = props;
+  return <p>{name}</p>;
+}
+
+const nameArray = ["Vaidehi", "DHarmishtha", "Vipula", "Fahim", "Dharmik"];
+
+class App extends Component {
+  state = { data: "" };
+  onTextChange = (data) => {
+    console.log("Data in Method ::", data);
+    this.setState({
+      data: data,
+    });
+  };
+
+  render() {
+    console.log("nameArray", nameArray);
+    return (
+      <div>
+        <h1>Hello </h1>
+        <p>{this.state.data}</p>
+        <Comment onTextChange={this.onTextChange} />
+        {nameArray.map((u, i) => {
+          return <Name name={u} />;
+        })}
+      </div>
+    );
+  }
+}
+
+export default App; -->
